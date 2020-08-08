@@ -1,5 +1,8 @@
 # [ZIO](https://zio.dev) crash course
 
+
+WIP probably never will be done as ZIO will soon have a book
+
 ## Content
 
 1. **Introduction**
