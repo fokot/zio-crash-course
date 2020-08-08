@@ -35,6 +35,11 @@ object customerservice {
 
 }
 
+// We ended up with this solution:
+// 1) it has less code (3x less boilerplate)
+// 2) we specify that we will work with DB, not exactly what operation are allowed, smtg like zio.Console specifies that it works with Console
+// 3) we have accessors out of the box, we do not need to write them
+// 4) we never mock db, in test we run db in docker anyway and it is important to test db layer too
 object CustomerService {
 
   type TransactorService = Has[Transactor[Task]]
