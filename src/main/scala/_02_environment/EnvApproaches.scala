@@ -40,6 +40,7 @@ object customerservice {
 // 2) we specify that we will work with DB, not exactly what operation are allowed, smtg like zio.Console specifies that it works with Console
 // 3) we have accessors out of the box, we do not need to write them
 // 4) we never mock db, in test we run db in docker anyway and it is important to test db layer too
+// 5) we can reuse ConnectionIO (part of the transactions) easily in different services
 object CustomerService {
 
   type TransactorService = Has[Transactor[Task]]
